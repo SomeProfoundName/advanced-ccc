@@ -1,4 +1,4 @@
-const todoList = ['Make Tea', 'Watch YouTube']
+const todoList = []
 
 renderToDoList()
 
