@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+#title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.todo-container {
+    margin: 20px;
+}
+
+.todo-container input {
+    margin-bottom: 10px;
+}
+
+.todo-list {
+    margin: 20px;
+}
+
+.todo-input {
+    display: flex;
+    margin: 10px 20px;
+}
+
+.todo-input p {
+    flex-grow: 3
+    ;
+}
