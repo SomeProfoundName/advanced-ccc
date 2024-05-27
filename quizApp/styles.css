@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Radio Canada Big", sans-serif;
+}
+
+body {
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.quiz-container {
+  margin-top: 50px;
+}
+.question {
+  font-size: 1.2rem;
+}
+
+.correct {
+  color: green;
+  text-shadow: 3px 3px 5px lightgreen;
+}
+
+.yes {
+  color: green;
+}
+
+.card-container {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.4px);
+  -webkit-backdrop-filter: blur(13.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
