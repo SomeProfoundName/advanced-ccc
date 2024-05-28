@@ -42,3 +42,31 @@ body {
   -webkit-backdrop-filter: blur(13.4px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+/* footer */
+
+.footer {
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+
+.footer-container {
+  display: flex;
+  gap: 0;
+}
+
+.footer-container a {
+  align-content: center;
+  /* border: 1px solid black; */
+  height: 100%;
+  padding: 10px;
+}
+
+.footer-container a:hover {
+  background-color: lightpink;
+}
