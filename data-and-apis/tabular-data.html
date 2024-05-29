@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphing Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="chart" width="1200px" height="400px">
+
+    </canvas>
+
+    <script>
+          const ctx = document.getElementById('chart');
+          const xLabels = []
+          const yTemps = []
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: xLabels,
+    datasets: [{
+      label: 'Global Avg Temp',
+      data: yTemps,
+      borderWidth: 1
+    }]
+  },
+});
+
+        getData()
+        
+        async function getData (){
+           const responce = await fetch('/data-and-apis/csv/ZonAnn.Ts+dSST.csv');
+           const data = await responce.text()
+        //    console.log(data)
+
+           const table = data.split('\n').slice(1);
+           table.forEach(row => {
+            const colums = row.split(',');
+            const year = colums[0];
+            xLabels.push(year);
+            const temp = colums[1];
+            yTemps.push(parseFloat(temp) + 14)
+            console.log(year, temp);
+        });
+        }
+    </script>
+</body>
+</html>
