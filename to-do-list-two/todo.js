@@ -6,10 +6,11 @@ function renderToDoList(){
     let todoListHTML = ''
 
     todoList.forEach((todoObject, index) => {
-        const name = todoObject;
+        const {name, dueDate} = todoObject;
         const html = `
         <div class="item">
-            <p>${name}</p>
+            <p class="name">${name}</p>
+            <p class="date">${dueDate}</p>
             <button type="button" class="btn btn-outline-danger js-delete-button">Delete</button>
         </div>
         `;
@@ -28,12 +29,14 @@ function renderToDoList(){
 
 function addTodo() {
     const todoInputElement = document.querySelector('.js-todo-input');
-    const todo = todoInputElement.value;
+    const todoInputDateElement = document.querySelector('.js-date-input')
+    const name = todoInputElement.value;
+    const dueDate = todoInputDateElement.value
 
     if (todoInputElement.value = '') {
         return;
     } else {
-        todoList.push(todo);
+        todoList.push({name, dueDate});
         console.log(todoList);
 
     todoInputElement.value = '';

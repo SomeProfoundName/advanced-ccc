@@ -14,7 +14,10 @@
     <form action="">
     <div class="input-area">
         <div class="form-box">
+          <div class="input-container">
             <input class="form-control js-todo-input" type="text" placeholder="To-Do" aria-label="default input example">
+            <input id="input-date" class="js-date-input" type="date" placeholder="dd/mm/yyyy">
+          </div>
             <div class="d-grid gap-2">
                 <button class="btn btn-primary" type="button" onclick="addTodo()">Submit</button>
             </div>
@@ -27,6 +30,7 @@
         <div class="todo-input">
           <div class="item">
             <p>Make Tea</p>
+            <p>2024-05-23</p>
             <button type="button" class="btn btn-outline-danger js-delete-button">Delete</button>
           </div>
         </div>
