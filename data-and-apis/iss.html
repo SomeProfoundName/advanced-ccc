@@ -20,8 +20,8 @@
 <body>
     <h1>WHERE IS THE ISS</h1>
 
-    <p>longitude: <span id="lon"></span> <br>
-    latitude: <span id="lat"></span>
+    <p>longitude: <span id="lon"></span>° <br>
+    latitude: <span id="lat"></span>°
     </p>
 
     <div id="issMap"></div>
@@ -39,13 +39,14 @@
 //MAKING MARKER WITH CUSTOM ICON
     const issIcon = L.icon({
     iconUrl: '/data-and-apis/images/iss-icon.png',
-    iconSize: [50, 32],
-    iconAnchor: [25, 16],
+    iconSize: [80, 80],
+    iconAnchor: [40, 40],
 });
     const marker = L.marker([0, 0], { icon: issIcon}).addTo(map);
 
+    let firstTime = true;
+
     //REACHES API AND SET LAT AND LON.
-    getISS()
     async function getISS() {
         const responce = await fetch(api_url);
         const data = await responce.json();
@@ -54,10 +55,21 @@
         // L.marker([latitude, longitude]).addTo(map);
         marker.setLatLng([latitude, longitude])
 
-        document.getElementById('lat').textContent = latitude;
-        document.getElementById('lon').textContent = longitude
+        if (firstTime) {
+            map.setView([latitude, longitude], 4)
+            firstTime = false;
+        }
+        
+        
+
+        document.getElementById('lat').textContent = latitude.toFixed(3);
+        document.getElementById('lon').textContent = longitude.toFixed(3);
         console.log(latitude, longitude);
     }
+
+    getISS()
+
+    setInterval(getISS, 1000)
     </script>
 </body>
 </html>
