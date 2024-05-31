@@ -20,7 +20,7 @@
         })
 
         async function catchRainbow() {
-            const responce = await fetch('/data-and-apis/images/rainbow.jpg');
+            const responce = await fetch('/data-and-apis-module-one/images/rainbow.jpg');
             const blob = await responce.blob();
             document.getElementById('rainbow').src = URL.createObjectURL(blob);
         }
