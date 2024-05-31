@@ -7,5 +7,42 @@
 </head>
 <body>
     <p>just imagine theres a website here</p>
+
+    <p>lat: <span id="lat"></span>&deg;<br>
+    lon: <span id="lon"></span>&deg;</p>
+
+    <button id="geolocate-button">GEOLOCATE</button>
+
+    <script>
+        const button = document.getElementById('geolocate-button');
+        button.addEventListener('click', geolocate)
+
+        function geolocate() {
+            if ('geolocation' in navigator) {
+                console.log('geolocation available')
+                navigator.geolocation.getCurrentPosition(async position => {
+                    const latitide = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    document.getElementById('lat').innerText = latitide;
+                    document.getElementById('lon').innerText = longitude;
+
+
+                    const data = { latitide, longitude };
+                    const options = {
+                        method: 'POST',
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(data)
+                    };
+                    const responce = await fetch('/api', options);
+                    const json = await responce.json();
+                    console.log(json)
+                });
+            } else {
+                console.log('geolocation not available')
+            }
+        }
+    </script>
 </body>
 </html>
