@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <h2>Data Selfie App</h2>
+
+    <div class="data-container">
+        <p class="js-name"></p>
+        <p class="js-geo"></p>
+        <p class="js-time"></p>
+    </div>
+
+    <script>
+        getData()
+        async function getData() {
+            const response = await fetch('/api');
+            const data = await response.json();
+            console.log(data);
+
+            let dataHTML = ''
+
+            for (item of data) {
+                const dateString = Date(item.timestamp).toLocaleString();
+                let html = `
+                <div class="data">
+                    <p class="js-name">Name: ${item.name}</p>
+                    <p class="js-geo">Latitude: ${item.latitude}°. Longitude: ${item.longitude}°.</p>
+                    <p class="js-time">${dateString}</p>
+                </div>
+                `
+                dataHTML += html
+                document.querySelector('.data-container').innerHTML = dataHTML
+            }
+        }
+    </script>
+    
+</body>
+</html>

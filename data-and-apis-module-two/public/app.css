@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Urbanist';
+}
+
+.data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.data {
+    background-color: rgba(211, 211, 211, 0.300);
+    width: 800px;
+}
+
+.data p {
+    margin: 5px;
+}

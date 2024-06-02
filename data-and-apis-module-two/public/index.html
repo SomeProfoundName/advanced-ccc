@@ -6,7 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <p>just imagine theres a website here</p>
+    <h2>Data Selfie App</h2>
+
+    <label for="name">Insert name</label>
+    <input type="text" name="name" id="name">
 
     <p>lat: <span id="lat"></span>&deg;<br>
     lon: <span id="lon"></span>&deg;</p>
@@ -17,17 +20,22 @@
         const button = document.getElementById('geolocate-button');
         button.addEventListener('click', geolocate)
 
+        
+
         function geolocate() {
             if ('geolocation' in navigator) {
                 console.log('geolocation available')
                 navigator.geolocation.getCurrentPosition(async position => {
-                    const latitide = position.coords.latitude;
+                    //get lat and lon from api
+                    const latitude = position.coords.latitude;
                     const longitude = position.coords.longitude;
-                    document.getElementById('lat').innerText = latitide;
+                    const name = document.getElementById('name').value
+                    //put lat and lon value on page
+                    document.getElementById('lat').innerText = latitude;
                     document.getElementById('lon').innerText = longitude;
 
-
-                    const data = { latitide, longitude };
+                    //pushing / posting data to server
+                    const data = { name, latitude, longitude };
                     const options = {
                         method: 'POST',
                         headers: {
@@ -35,8 +43,8 @@
                         },
                         body: JSON.stringify(data)
                     };
-                    const responce = await fetch('/api', options);
-                    const json = await responce.json();
+                    const response = await fetch('/api', options);
+                    const json = await response.json();
                     console.log(json)
                 });
             } else {
