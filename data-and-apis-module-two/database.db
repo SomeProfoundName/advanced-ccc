@@ -6,5 +6,9 @@
 {"name":"Collins","latitude":51.4847579,"longitude":-0.0718109,"timestamp":1717344656813,"_id":"qADJDsABr71L1qs5"}
 {"name":"Ace","latitude":51.4847579,"longitude":-0.0718109,"timestamp":1717347998877,"_id":"wRsubhERBE3HyaHd"}
 {"name":"Tommy","latitude":51.4847579,"longitude":-0.0718109,"timestamp":1717347991313,"_id":"xwF2CSHtbkQifCAK"}
+<<<<<<< HEAD
 {"name":"collins","latitude":51.4777083,"longitude":-0.0244683,"timestamp":1717426938247,"_id":"yzwbeRB5UZXDOOM1"}
 {"name":"Collins","latitude":51.4891337,"longitude":-0.0324969,"timestamp":1717440484786,"_id":"VHKHZleOK4xfxZNF"}
+=======
+{"name":"","latitude":51.4847579,"longitude":-0.0718109,"timestamp":1717352629277,"_id":"a4ymWGz4IheBXM3R"}
+>>>>>>> 7cc93e334a1c07638bdccad1aef10695561a6201
