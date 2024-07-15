@@ -27,7 +27,7 @@ To use this application:
 
 ---
 
-1. data-and-apis-module-one
+2. data-and-apis-module-two
 
 Project: Data Selfie App
 
@@ -56,7 +56,7 @@ To use this application:
 
 ---
 
-1. quizApp
+3. quizApp
 
 This project is a quiz app. The task for this was to modify the code in any way. I added it so the correct answer shows in green, while the incorrect show in red. Additionally, styling for the webpage was added.
 
@@ -75,7 +75,7 @@ To use this application:
 
 ---
 
-1. to-do-list & to-do-list-two
+4. to-do-list & to-do-list-two
 
 This project contain code for a to-do list webpage. The task was to clone to-do-list one.
 
