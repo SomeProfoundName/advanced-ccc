@@ -48,11 +48,20 @@ The back-end can also be viewed on the webpage. The project also follows the tut
 
 ### Installation
 
+Software Needed:
+- Node.js
+
 To use this application:
 
 1. Clone the project using git.
-2. To run the backend use `node index.js`.
-3. The front-end can be found in the public folder. Open index.html with live server (VS Code).
+2. Use `npm init -y` in the project directory terminal.
+3. Install the dependencies.
+   * `npm install dotenv`
+   * `npm install nedb`
+   * `npm install express`
+   * optional `npm install nodemon`
+5. To run the backend use `node index.js`. Or `nodemon index.js` (if nodemon was installed)
+6. The front-end can be found in the public folder. Open index.html with live server (VS Code).
 
 ---
 
