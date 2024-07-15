@@ -15,8 +15,8 @@ This project maps the location of the ISS and marks it on a map. The project fol
 1. HTML
 2. CSS
 3. Javascript
-4. https://wheretheiss.at/
-5. https://leafletjs.com/reference.html 
+4. [ISS API](https://wheretheiss.at/)
+5. [Leaflet](https://leafletjs.com/reference.html) 
 
 ### Installation
 
