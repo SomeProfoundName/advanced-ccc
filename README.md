@@ -18,7 +18,7 @@ This project maps the location of the ISS and marks it on a map. The project fol
 4. https://wheretheiss.at/
 5. https://leafletjs.com/reference.html 
 
-## Installation
+### Installation
 
 To use this application:
 
@@ -27,7 +27,7 @@ To use this application:
 
 ---
 
-2. data-and-apis-module-two
+## 2. data-and-apis-module-two
 
 Project: Data Selfie App
 
@@ -46,7 +46,7 @@ The back-end can also be viewed on the webpage. The project also follows the tut
 6. express
 7. nedb
 
-## Installation
+### Installation
 
 To use this application:
 
@@ -56,7 +56,7 @@ To use this application:
 
 ---
 
-3. quizApp
+## 3. quizApp
 
 This project is a quiz app. The task for this was to modify the code in any way. I added it so the correct answer shows in green, while the incorrect show in red. Additionally, styling for the webpage was added.
 
@@ -66,7 +66,7 @@ This project is a quiz app. The task for this was to modify the code in any way.
 2. CSS
 3. JavaScript
 
-## Installation
+### Installation
 
 To use this application:
 
@@ -75,7 +75,7 @@ To use this application:
 
 ---
 
-4. to-do-list & to-do-list-two
+## 4. to-do-list & to-do-list-two
 
 This project contain code for a to-do list webpage. The task was to clone to-do-list one.
 
@@ -85,7 +85,7 @@ This project contain code for a to-do list webpage. The task was to clone to-do-
 2. CSS
 3. JavaScript
 
-## Installation
+### Installation
 
 To use this application:
 
