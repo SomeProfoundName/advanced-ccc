@@ -34,7 +34,7 @@ Project: Data Selfie App
 [Server-side with Node.js - Working with Data and APIs in JavaScript](https://www.youtube.com/watch?v=wxbQP1LMZsw&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=9)
 
 This project is a full stack application that gets the name of a user through an input box, the browsers geolocation data and inputs that into a database (.csv).  The backend uses node.js. 
-The back-end can also be viewed on the webpage.
+The back-end can also be viewed on the webpage. The project also follows the tutorial by the coding train on YouTube.
 
 ### Technologies Used
 
